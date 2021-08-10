@@ -33,6 +33,16 @@
       let childOfFirstChild = document.createElement('section');
       childOfFirstChild.id = 'childOfFirstChild';
       childOfChild.appendChild(childOfFirstChild);
+
+      let fatherOfFather = document.querySelector('#paiDoPai');
+    
+      for (let index = 0; index < fatherOfFather.length; index += 1) {
+        let element = fatherOfFather[index];
+
+        if (index !== 0 || index !== 2 || index !== 3) {
+          fatherOfFather.removeChild(element);
+        }
+      }
     </script>
   </main>
 </body>
