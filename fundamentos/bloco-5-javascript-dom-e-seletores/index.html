@@ -86,6 +86,21 @@
       image.src = 'https://picsum.photos/200';
       image.className = 'small-image';
       leftSection.appendChild(image);
+      //Adiciona a ul
+      let ul = document.createElement('ul');
+      rightSection.appendChild(ul);
+      //Adiciona elementos na ul
+      let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+      for (let index = 0; index < numbers.length; index +=1 ) {
+        let li = document.createElement('li');
+        li.innerText = numbers[index];
+        ul.appendChild(li);
+      }
+      //Adiciona 3 tags h3, todas filhas do main
+      for (let index = 1; index <= 3; index += 1) {
+        let h3 = document.createElement('h3');
+        main.appendChild(h3);
+      }
     </script>
   </body>
 </html>
