@@ -21,14 +21,17 @@
     <script>
       let newElement = document.querySelector('#pai')
       let siblingElement = document.createElement('section');
+      siblingElement.id = 'siblingOfElementoOndeVoceEsta'
       newElement.appendChild(siblingElement);
 
       let childOfElement = document.querySelector('#elementoOndeVoceEsta');
       let childOfElementOndeVoceEsta = document.createElement('section');
+      childOfElementOndeVoceEsta.id = 'childOfElementOndeVoceEsta'
       childOfElement.appendChild(childOfElementOndeVoceEsta);
 
       let childOfChild = document.querySelector('#primeiroFilhoDoFilho');
       let childOfFirstChild = document.createElement('section');
+      childOfFirstChild.id = 'childOfFirstChild';
       childOfChild.appendChild(childOfFirstChild);
     </script>
   </main>
