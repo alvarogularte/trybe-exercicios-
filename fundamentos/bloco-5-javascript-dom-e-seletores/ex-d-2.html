@@ -19,7 +19,17 @@
       <section id="quartoEUltimoFilho"></section>
     </section>
     <script>
-      
+      let newElement = document.querySelector('#pai')
+      let siblingElement = document.createElement('section');
+      newElement.appendChild(siblingElement);
+
+      let childOfElement = document.querySelector('#elementoOndeVoceEsta');
+      let childOfElementOndeVoceEsta = document.createElement('section');
+      childOfElement.appendChild(childOfElementOndeVoceEsta);
+
+      let childOfChild = document.querySelector('#primeiroFilhoDoFilho');
+      let childOfFirstChild = document.createElement('section');
+      childOfChild.appendChild(childOfFirstChild);
     </script>
   </main>
 </body>
