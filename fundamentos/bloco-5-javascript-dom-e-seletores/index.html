@@ -100,7 +100,13 @@
       for (let index = 1; index <= 3; index += 1) {
         let h3 = document.createElement('h3');
         main.appendChild(h3);
+        //Adiciona a classe description nas 3 tags h3
+        h3.className = 'description';
       }
+      //Adiciona a classe title na tag h1
+      h1.className = 'title';
+      //Remove a leftSection
+      main.removeChild(leftSection);
     </script>
   </body>
 </html>
