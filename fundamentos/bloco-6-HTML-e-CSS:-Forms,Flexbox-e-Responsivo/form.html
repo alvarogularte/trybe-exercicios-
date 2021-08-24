@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Formulário para cadastro de currículos</h1>
+    <p>Preencha os campos abaixo.</p>
+  </header>
+  <main>
+    <form action="" method="POST">
+      <div>
+        <fieldset>
+          <div>
+            <label for="input-name">Digite seu nome: 
+              <input type="text" maxlength="30" name="name" id="input-name" required>
+            </label>
+          </div>
+          <div>
+            <label for="input-email">Digite seu e-mail: 
+              <input type="email" maxlength="50" name="email" id="input-email" required>
+            </label>
+          </div>
+          <div>
+            <label for="input-cpf">Digite seu CPF: 
+              <input type="text" maxlength="11" name="cpf" id="input-cpf" required>
+            </label>
+          </div>
+          <div>
+            <label for="input-endereco">Digite seu endereço: </label>
+              <input type="text" maxlength="200" name="endereco" id="input-endereco" required>
+          </div>
+          <div>
+            <label for="input-cidade">Digite sua cidade: </label>
+              <input type="text" maxlength="28" name="cidade" id="input-cidade" required>
+          </div>
+          <div>
+            <label for="select-estado">Estado: </label>
+              <select name="estado" id="select-estado" required>
+                <option disabled selected value>Selecione seu estado</option>
+              </select>
+          </div>
+          <div>
+            <label for="radio-casa">Casa
+              <input type="radio" name="radio" id="radio-casa" value="Casa" checked>
+            </label>
+          </div>
+          <div>
+            <label for="radio-ap">Apartamento
+              <input type="radio" name="radio" id="radio-ap" value="Apartamento">
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </form>  
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
