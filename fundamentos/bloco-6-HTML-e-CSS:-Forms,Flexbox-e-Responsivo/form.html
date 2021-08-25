@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Cadastro de Currículos</title>
 </head>
 <body>
   <header class="header">
@@ -16,45 +16,61 @@
       <div>
         <fieldset>
           <div>
-            <label for="input-name">Digite seu nome: 
-              <input type="text" maxlength="30" name="name" id="input-name" required>
-            </label>
+            <label for="input-name">Digite seu nome: </label>
+            <input type="text" maxlength="30" name="name" id="input-name" required>
           </div>
           <div>
-            <label for="input-email">Digite seu e-mail: 
-              <input type="email" maxlength="50" name="email" id="input-email" required>
-            </label>
+            <label for="input-email">Digite seu e-mail: </label>
+            <input type="email" maxlength="50" name="email" id="input-email" required>
           </div>
           <div>
-            <label for="input-cpf">Digite seu CPF: 
-              <input type="text" maxlength="11" name="cpf" id="input-cpf" required>
-            </label>
+            <label for="input-cpf">Digite seu CPF: </label>
+            <input type="text" maxlength="11" name="cpf" id="input-cpf" required>
           </div>
           <div>
             <label for="input-endereco">Digite seu endereço: </label>
-              <input type="text" maxlength="200" name="endereco" id="input-endereco" required>
+            <input type="text" maxlength="200" name="endereco" id="input-endereco" required>
           </div>
           <div>
             <label for="input-cidade">Digite sua cidade: </label>
-              <input type="text" maxlength="28" name="cidade" id="input-cidade" required>
+            <input type="text" maxlength="28" name="cidade" id="input-cidade" required>
           </div>
           <div>
             <label for="select-estado">Estado: </label>
-              <select name="estado" id="select-estado" required>
-                <option disabled selected value>Selecione seu estado</option>
-              </select>
+            <select name="estado" id="select-estado" required>
+              <option disabled selected value>Selecione seu estado</option>
+            </select>
           </div>
           <div>
-            <label for="radio-casa">Casa
-              <input type="radio" name="radio" id="radio-casa" value="Casa" checked>
-            </label>
-          </div>
-          <div>
-            <label for="radio-ap">Apartamento
-              <input type="radio" name="radio" id="radio-ap" value="Apartamento">
-            </label>
+            <label for="house-type">Tipo de imóvel: </label>
+            <input type="radio" name="house-type" id="house" value="house">
+            <span>Casa</span>
+            <input type="radio" name="house-type" id="apartment" value="apartment">
+            <span>Apartamento</span>
           </div>
         </fieldset>
+        <div>
+          <fieldset>
+            <div>
+              <label for="cv-resume">Resumo do currículo</label>
+              <textarea name="cv-resume" id="cv-resume" cols="100" rows="20" maxlength="1000" required></textarea>
+            </div>
+            <div>
+              <label for="role">Cargo: </label>
+              <input type="text" name="role" id="role" maxlength="40" required>
+            </div>
+            <div>
+              <label for="role-description">Descrição do cargo: </label>
+              <input type="text" name="role-description" id="role-description" maxlength="500" required>
+            </div>
+            <div>
+              <label for="start-date">Data de início: </label>
+              <input type="text" name="start-date" id="start-date" required>
+            </div>
+          </fieldset>
+          <button type="submit" class="submit-button">Enviar</button>
+          <button type="button" class="clear-button">Limpar</button>
+        </div>
       </div>
     </form>  
   </main>
