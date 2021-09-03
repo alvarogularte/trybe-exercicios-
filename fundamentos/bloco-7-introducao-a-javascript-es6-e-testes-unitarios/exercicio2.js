@@ -32,3 +32,8 @@ const objectSize = (object) => {
   return Object.keys(object).length;
 }
 console.log(objectSize(lesson2));
+
+const showValues = (object) => {
+  return Object.values(object)
+}
+console.log(showValues(lesson2));
