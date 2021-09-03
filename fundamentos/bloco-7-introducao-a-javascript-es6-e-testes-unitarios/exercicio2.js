@@ -23,4 +23,7 @@ function addNightTurn(object, key, value) {
 }
 addNightTurn(lesson2, 'Turno', 'Noturno');
 
-console.log(lesson2);
+const showKeys = (object) => {
+  return Object.keys(object);
+}
+console.log(showKeys(lesson1));
