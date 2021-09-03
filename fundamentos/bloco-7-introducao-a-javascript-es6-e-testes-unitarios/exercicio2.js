@@ -21,19 +21,22 @@ const lesson3 = {
 function addNightTurn(object, key, value) {
   object[key] = value;
 }
-addNightTurn(lesson2, 'Turno', 'Noturno');
+addNightTurn(lesson2, 'turno', 'noite');
 
 const showKeys = (object) => {
   return Object.keys(object);
 }
-console.log(showKeys(lesson1));
+// console.log(showKeys(lesson1));
 
 const objectSize = (object) => {
   return Object.keys(object).length;
 }
-console.log(objectSize(lesson2));
+// console.log(objectSize(lesson2));
 
 const showValues = (object) => {
   return Object.values(object)
 }
-console.log(showValues(lesson2));
+// console.log(showValues(lesson2));
+
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+console.log(allLessons);
