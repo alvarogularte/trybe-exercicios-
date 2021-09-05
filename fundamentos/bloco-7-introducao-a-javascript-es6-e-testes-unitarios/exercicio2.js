@@ -79,4 +79,26 @@ const mathClass = (object) => {
   }
   return total;
 }
-console.log(mathClass(allLessons));
+// console.log(mathClass(allLessons));
+
+const getInfo = (object, key) => {
+  const allLessons = [];
+  let allStudents = 0;
+  const arr = Object.values(object);
+
+  for (let index in arr) {
+    if (arr[index].professor === key) {
+      allLessons.push(arr[index].materia);
+      allStudents += arr[index].numeroEstudantes;
+    }
+  }
+  return {lessons: allLessons, estudantes: allStudents};
+}
+
+const createReport = (allLessons, name) => {
+  const report = {};
+  report.professor = name;
+  Object.assign(report, getInfo(allLessons, name));
+  return report;
+}
+console.log(createReport(allLessons, 'Maria Clara'));
