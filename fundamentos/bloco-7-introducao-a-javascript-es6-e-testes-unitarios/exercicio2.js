@@ -66,4 +66,17 @@ const verifyPair = (object, key, value) => {
   }
   return isEqual;
 }
-console.log(verifyPair(lesson3, 'turno', 'noite'));
+// console.log(verifyPair(lesson3, 'turno', 'noite'));
+
+const mathClass = (object) => {
+  const getStudents = Object.keys(object);
+  let total = 0;
+
+  for (let index in getStudents) {
+    if (object[getStudents[index]].materia === 'Matemática') {
+      total += object[getStudents[index]].numeroEstudantes;
+    }
+  }
+  return total;
+}
+console.log(mathClass(allLessons));
