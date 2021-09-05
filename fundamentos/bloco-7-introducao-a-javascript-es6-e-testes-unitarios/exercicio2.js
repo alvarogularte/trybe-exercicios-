@@ -55,4 +55,15 @@ const countStudents = (object) => {
 const getValueByNumber = (object, number) => {
   return Object.values(object)[number];
 }
-console.log(getValueByNumber(lesson1, 1));
+// console.log(getValueByNumber(lesson1, 1));
+
+const verifyPair = (object, key, value) => {
+  const objectEntries = Object.entries(object);
+  let isEqual = false;
+
+  for (let index in objectEntries) {
+    if (objectEntries[index][0] === key && objectEntries[index][1] === value) isEqual = true;
+  }
+  return isEqual;
+}
+console.log(verifyPair(lesson3, 'turno', 'noite'));
