@@ -164,35 +164,52 @@ const books = [
 
 // Requisito 4
 
+// const expectedResult = [
+//   {
+//     id: 6,
+//     name: 'O Chamado de Cthulhu',
+//     genre: 'Terror',
+//     author: { name: 'H. P. Lovecraft', birthYear: 1890 },
+//     releaseYear: 1928,
+//   },
+//   {
+//     id: 3,
+//     name: 'Fundação',
+//     genre: 'Ficção Científica',
+//     author: { name: 'Isaac Asimov', birthYear: 1920 },
+//     releaseYear: 1951,
+//   },
+//   {
+//     id: 2,
+//     name: 'O Senhor dos Anéis',
+//     genre: 'Fantasia',
+//     author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+//     releaseYear: 1954,
+//   },
+// ];
+
+// function oldBooksOrdered() {
+//   // escreva seu código aqui
+//   // Referência para o uso de datas - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/getYear
+//   const currentYear = new Date().getFullYear();
+//   return books.filter((book) => (book.releaseYear < currentYear - 60)).sort((book1, book2) => book1.releaseYear - book2.releaseYear);
+// }
+// console.log(oldBooksOrdered());
+// assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
+
+// Requisito 5
+
 const expectedResult = [
-  {
-    id: 6,
-    name: 'O Chamado de Cthulhu',
-    genre: 'Terror',
-    author: { name: 'H. P. Lovecraft', birthYear: 1890 },
-    releaseYear: 1928,
-  },
-  {
-    id: 3,
-    name: 'Fundação',
-    genre: 'Ficção Científica',
-    author: { name: 'Isaac Asimov', birthYear: 1920 },
-    releaseYear: 1951,
-  },
-  {
-    id: 2,
-    name: 'O Senhor dos Anéis',
-    genre: 'Fantasia',
-    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
-    releaseYear: 1954,
-  },
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
 ];
 
-function oldBooksOrdered() {
+function fantasyOrScienceFictionAuthors() {
   // escreva seu código aqui
-  // Referência para o uso de datas - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/getYear
-  const currentYear = new Date().getFullYear();
-  return books.filter((book) => (book.releaseYear < currentYear - 60)).sort((book1, book2) => book1.releaseYear - book2.releaseYear);
+  return books.filter((book) => (
+    book.genre === 'Ficção Científica' || book.genre === 'Fantasia')).map((book) => book.author.name).sort();
 }
-console.log(oldBooksOrdered());
-assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
+console.log(fantasyOrScienceFictionAuthors());
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
