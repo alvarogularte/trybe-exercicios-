@@ -197,19 +197,34 @@ const books = [
 // console.log(oldBooksOrdered());
 // assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
 
-// Requisito 5
+// // Requisito 5
+
+// const expectedResult = [
+//   'Frank Herbert',
+//   'George R. R. Martin',
+//   'Isaac Asimov',
+//   'J. R. R. Tolkien',
+// ];
+
+// function fantasyOrScienceFictionAuthors() {
+//   // escreva seu código aqui
+//   return books.filter((book) => (
+//     book.genre === 'Ficção Científica' || book.genre === 'Fantasia')).map((book) => book.author.name).sort();
+// }
+// console.log(fantasyOrScienceFictionAuthors());
+// assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
+
+// Requisito 6
 
 const expectedResult = [
-  'Frank Herbert',
-  'George R. R. Martin',
-  'Isaac Asimov',
-  'J. R. R. Tolkien',
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
 ];
 
-function fantasyOrScienceFictionAuthors() {
-  // escreva seu código aqui
-  return books.filter((book) => (
-    book.genre === 'Ficção Científica' || book.genre === 'Fantasia')).map((book) => book.author.name).sort();
+function oldBooks() {
+  const currentYear = new Date().getFullYear();
+  return books.filter((book) => currentYear - book.releaseYear > 60).map((book) => book.name);
 }
-console.log(fantasyOrScienceFictionAuthors());
-assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
+console.log(oldBooks());
+assert.deepStrictEqual(oldBooks(), expectedResult);
