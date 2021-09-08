@@ -63,21 +63,19 @@ const books = [
   },
 ];
 
-// Requisito 1
+// // Requisito 5
 
-// Adicione o código do exercício aqui:
 const expectedResult = [
-  'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-  'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-  'Fundação - Ficção Científica - Isaac Asimov',
-  'Duna - Ficção Científica - Frank Herbert',
-  'A Coisa - Terror - Stephen King',
-  'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
 ];
 
-function formatedBookNames() {
+function fantasyOrScienceFictionAuthors() {
   // escreva seu código aqui
-  return books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
+  return books.filter((book) => (
+    book.genre === 'Ficção Científica' || book.genre === 'Fantasia')).map((book) => book.author.name).sort();
 }
-console.log(formatedBookNames(books));
-assert.deepStrictEqual(formatedBookNames(), expectedResult);
+console.log(fantasyOrScienceFictionAuthors());
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
