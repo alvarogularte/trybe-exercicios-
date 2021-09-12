@@ -15,11 +15,33 @@
 // console.log(newEmployees(employees));
 
 // Requisito 2
-const checker = (mynumber, number) => mynumber === number;
+// const checker = (mynumber, number) => mynumber === number;
 
-const raffle = (myNumber, callback) => {
-  const number = Math.floor((Math.random() * 5) +1);
-  return callback(myNumber, number) ? 'Lucky day, you won!' : 'Bad lucky, try again!'
-};
+// const raffle = (myNumber, callback) => {
+//   const number = Math.floor((Math.random() * 5) +1);
+//   return callback(myNumber, number) ? 'Lucky day, you won!' : 'Bad lucky, try again!'
+// };
 
-console.log(raffle(3, checker));
+// console.log(raffle(3, checker));
+
+// Requisito 3
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const answersChecker = (rightAnswers, studentAnswers, action) => {
+  let counter = 0;
+  for (let index = 0; index < rightAnswers.length; index += 1) {
+    const actionResult = action(rightAnswers[index], studentAnswers[index]);
+    counter += actionResult;
+  }
+  return `Resultado final: ${counter} corretas`;
+}
+
+console.log(answersChecker(RIGHT_ANSWERS, STUDENT_ANSWERS, (rAnswer, uAnswer) => {
+  if (rAnswer === uAnswer) {
+    return 1;
+  } if (uAnswer === 'N.A') {
+    return 0;
+  }
+  return -0.5;
+}));
