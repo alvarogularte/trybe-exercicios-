@@ -7,3 +7,4 @@ test("testando se a função foi chamada, qual seu retorno e quantas vezes foi c
   expect(service.generateRandomNumber).toHaveBeenCalled();
   expect(service.generateRandomNumber).toHaveBeenCalled(1);
 });
+
