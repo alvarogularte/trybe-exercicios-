@@ -8,10 +8,10 @@ services:
       - db
     environment:
       - database__client=mysql
-      - database__connection__database=ghost
       - database__connection__host=db
       - database__connection__user=root
-      - database__connection__password=root
+      - database__connection__password=example
+      - database__connection__database=ghost
     networks:
       - my-network
   db:
@@ -23,8 +23,7 @@ services:
       - db-data:/var/lib/mysql
     networks:
       - my-network
-
-volumes:
-  db-data:
-networks:
-  my-network:
+  volumes:
+    db-data
+  networks:
+    my-network
