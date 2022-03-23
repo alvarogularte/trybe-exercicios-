@@ -2,6 +2,4 @@ import utils from './utils';
 
 const units = ["kg", "hg", "dag", "g", "dg", "cg", "mg"];
 
-function convert(value: number, forUnity: string, toUnity: string): number {
-  return utils.convert(units, value, forUnity, toUnity);
-}
+utils.exec(units); // chamamos diretamente a função exec de utils.ts
