@@ -12,7 +12,7 @@ class Estatistica:
         index = len(numbers) // 2
         if len(numbers) % 2 == 0:
             return (numbers[index - 1] + numbers[index]) / 2
-        
+
         return numbers[index]
 
     @classmethod
